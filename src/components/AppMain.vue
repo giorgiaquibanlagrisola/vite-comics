@@ -125,13 +125,16 @@ export default {
     .list-current-comics {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
 
         .single-comic {
             width: 15%;
+            margin: 20px 5px;
             
             > div {
                 > img {
                     width: 100%;
+                    aspect-ratio: 1/1;
                 }
             }
         }
