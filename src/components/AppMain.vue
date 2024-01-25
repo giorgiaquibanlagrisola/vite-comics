@@ -84,7 +84,26 @@ export default {
 <template>
     <main>
         <div class="comics-container">
-        -> Content goes here 
+            <div class="jumbotron"></div>
+            <div class="comics-list">
+                <div class="current-comics">
+                    CURRENT SERIES
+                </div>
+                <div class="list-current-comics">
+                    <div class="single-comic" v-for="(comic, i) in comics" :key="i">
+                        <div>
+                            <img :src="comic.thumb" :alt="comic.series">
+                        </div>
+
+                        {{ comic.series }}
+                    </div>
+                </div>
+                <div class="load-more">
+                    <button class="load-more-button">
+                        LOAD MORE
+                    </button>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -94,8 +113,28 @@ export default {
     .comics-container {
         color: white;
         background-color: black;
-        padding: 50px 20px;
         font-weight: bold;
+    }
+
+    .jumbotron {
+        height: 400px;
+        background-image: url('/img/jumbotron.jpg');
+        background-position: top;
+    }
+
+    .list-current-comics {
+        display: flex;
+        flex-wrap: wrap;
+
+        .single-comic {
+            width: 15%;
+            
+            > div {
+                > img {
+                    width: 100%;
+                }
+            }
+        }
     }
 
 </style>

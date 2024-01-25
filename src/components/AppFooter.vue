@@ -199,7 +199,7 @@ export default {
 
             </div>
             <div class="footer-logo-container">
-                <img src="../public/img/dc-logo-bg.png" alt="">
+                <img src="/img/dc-logo-bg.png" alt="">
             </div>
         </div>
         <div class="footer-bottom">
@@ -243,13 +243,10 @@ export default {
     color: white;
     text-decoration: none;
 }
-.buy-comics {
-
-}
 
 .main-footer {
     min-height: 400px;
-    background-image: url('../public/img/footer-bg.jpg');
+    background-image: url('/img/footer-bg.jpg');
     display: flex;
     justify-content: space-between;
     
